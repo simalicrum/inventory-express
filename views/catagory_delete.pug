@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div(class="m-8")
+    div(class="space-y-2")
+      a(href=catagory.url class="text-4xl text-gray-900") #{catagory.name}
+    div(class="text-gray-700 text-xl my-8") This will remove this catagory from the catalog. Are you sure?
+    div(class="my-8 flex justify-between")
+      a(class="text-gray-400 border-2 border-gray-400 py-2 px-8 rounded" href=catagory.url) Go back
+      form(method="POST" action="")
+        div.form-group
+          input#catagoryid.form-control(type='hidden',name='catagoryid', required='true', value=catagory._id )
+        button(class="text-red-100 bg-red-600 py-2 px-8 rounded" type="submit") REMOVE FROM CATALOG

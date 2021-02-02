@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1(class="text-4xl text-gray-900 m-8") All Items
+  ul
+    each item in all_items
+      li
+        div(class="rounded bg-white shadow-lg p-8 mx-8 my-4 space-y-1")
+          a(href=item.url class="text-xl text-gray-900") #{item.name}
+          p(class="text-gray-700") #{item.description}
+          p(class="text-sm text-gray-500 font-semibold") CAD $#{item.price}
+          p(class="text-sm text-gray-500") #{item.number} in stock
+          div
+            each catagory in item.catagories
+              span(class="my-2 text-xs text-green-400 bg-green-100  border-green-200 py-1 px-2 rounded-md")
+                a(href=catagory.url) #{catagory.name}

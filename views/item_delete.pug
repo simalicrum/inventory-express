@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div(class="m-8")
+    div(class="space-y-2")
+      a(href=item.url class="text-4xl text-gray-900") #{item.name}
+    div(class="text-gray-700 text-xl my-8") This will remove this item from the catalog. Are you sure?
+    div(class="my-8 flex justify-between")
+      a(class="text-gray-400 border-2 border-gray-400 py-2 px-8 rounded" href=item.url) Go back
+      form(method="POST" action="")
+        div.form-group
+          input#itemid.form-control(type='hidden',name='itemid', required='true', value=item._id )
+        button(class="text-red-100 bg-red-600 py-2 px-8 rounded" type="submit") REMOVE FROM CATALOG
