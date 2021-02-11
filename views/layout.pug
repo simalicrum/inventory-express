@@ -6,11 +6,12 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    script(src="/javascripts/bundle.js")
     div(class="grid md:grid-cols-4 xl:grid-cols-6 md:h-screen")
       div(class="shadow-lg h-screen bg-gradient-to-b from-purple-700 to-purple-500  md:overflow-auto")
         div(class="m-8 space-y-8")
           a(class="text-2xl text-white text-opacity-50" href="/")
-            svg(class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
+            svg(height="36" width="36" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor")
               path(stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4")
           ul(class="text-2xl md:text-base text-center md:text-left text-white text-opacity-70 uppercase font-semibold space-y-2")
             each catagory in catagory_list
@@ -24,4 +25,4 @@ html
             a(href="/catagories/create" class="text-2xl md:text-base text-white text-opacity-50 uppercase font-semibold") Create New Catagory
       div(class="md:col-span-3 xl:col-span-5 bg-gray-100 md:h-screen md:overflow-auto")
         block content
-    script(src="/javascripts/bundle.js")
+    

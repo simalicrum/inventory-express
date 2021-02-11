@@ -18,7 +18,6 @@ var itemRouter = require("./routes/item");
 var allitemsRouter = require("./routes/all_items");
 var catagoryRouter = require("./routes/catagories");
 var compression = require("compression");
-var compression = require("compression");
 var helmet = require("helmet");
 
 var app = express();
